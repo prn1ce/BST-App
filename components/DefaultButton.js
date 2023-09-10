@@ -22,12 +22,22 @@ export default function DefaultButton({
     btnColor,
     btnColorBorder,
     btnTextColor,
-    smallButton}) {
+    smallButton,
+    onPress }) {
 
     {/* Create a function that allows Navigation to the provided 'navigateTo' page.*/}
     const navRegistration = () => {
         navigation.navigate(navigateTo);
       };
+
+    {/* Create the Button so that it is Versatile and can handle various behaviours. */}
+    const handlePress = () => {
+        if (onPress) {
+            onPress();
+        } else if (navigateTo) {
+            navRegistration
+        }
+    }
 
     {/* Re-adjust the Button's Size if it is a SmallButton */}
     const vertPadding = smallButton ? {paddingVertical: 5} : {paddingVertical : 15}
@@ -41,7 +51,7 @@ export default function DefaultButton({
             borderColor: btnColorBorder,
             ...vertPadding,
         }]} 
-          onPress={navRegistration}>
+          onPress={handlePress}>
             <Text style={{
                 fontSize: labelSize,
                 color: btnTextColor,

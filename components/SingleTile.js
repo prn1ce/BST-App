@@ -49,7 +49,7 @@ export default function SingleTile({
                             <DefaultButton 
                             label={'View'} 
                             smallButton={true} 
-                            onPress={() => navigation.navigate({navigateTo})}
+                            onPress={() => navigation.navigate(navigateTo)}
                             navigation={navigation} 
                             navigateTo={navigateTo}/>
                         </View>

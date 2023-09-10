@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, ScrollView, SafeAreaView, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView, Dimensions } from 'react-native'
 import { styles } from '../styles';
 import CustomHeader from '../../components/CustomHeader';
 import SingleTile from '../../components/SingleTile';
 import Divider from '../../components/Divider';
 
-export default function CurrentMealPlanPage() {
+export default function CurrentMealPlanPage({ navigation }) {
 
     {/* Set the Default Width of the Application */}
     const defaultWidth = Dimensions.get('window').width - 40;
@@ -54,6 +54,8 @@ export default function CurrentMealPlanPage() {
                     subHeaderActive={true}
                     subHeaderText={'The perfect, midday treat for you!'}
                     viewButton={true}
+                    navigation={navigation}
+                    navigateTo={'MealInformationPage'}
                     />
 
                     <Divider />

@@ -81,6 +81,12 @@ export const styles = StyleSheet.create({
     color: 'white',
   },
 
+  bodyText: {
+    fontSize: 12,
+    color: 'white',
+    textAlign: 'justify',
+  },
+
   /* Define: Global Components */
   pinkButton: {
     borderRadius: 5,
