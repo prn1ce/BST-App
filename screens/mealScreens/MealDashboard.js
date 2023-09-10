@@ -38,10 +38,12 @@ export default function MealDashboard() {
                     
                     <View style={[styles.bodyContent, {gap: 20}]}>
 
+                        {/* Add the Header */}
                         <View>
-                            <Text style={styles.pagesSubheading}>Nutrition is Key!</Text>
+                            <Text style={styles.header}>Nutrition is Key!</Text>
                         </View>
 
+                        {/* Add Your Current Meal Plan Viewing */}
                         <SingleTile 
                             label={'Your Current Meal Plan'}
                             imagePath={require('../../assets/mealScreensImages/dashboardSection/currentMealPlan.jpg')}
@@ -53,8 +55,9 @@ export default function MealDashboard() {
                             viewButton={true}
                         />
 
+                        {/* Add Your Current Macro Details Viewing */}
                         <SingleTile 
-                            label={'Your Current Meal Plan'}
+                            label={'Your Current Macro Details'}
                             imagePath={require('../../assets/mealScreensImages/dashboardSection/macroDetails.jpg')}
                             tileWidth={defaultWidth}
                             tileHeight={thumbnailTileHeight}
@@ -64,13 +67,15 @@ export default function MealDashboard() {
                             viewButton={true}
                         />
 
+                        {/* Divide */}
                         <Divider />
 
                         {/* The Horizontal Scroll Content. */}
                         <HorizontalContent 
                         titleArray={arrayTitles}
                         imageArray={arrayImages}
-                        headingTitle={'Recommended Meals for you!'}/>
+                        headingTitle={'Recommended Meals for you!'} 
+                        />
 
                     </View>
                 </View>

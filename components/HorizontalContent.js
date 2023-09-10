@@ -21,7 +21,7 @@ export default function HorizontalContent({titleArray, imageArray, tileHeight, t
         <View style={{gap: 10}}>
 
             {/* Adding Title to the Content. */}
-            <Text style={styles.pagesSubheading}>
+            <Text style={styles.header}>
                 {headingTitle}
             </Text>
 

@@ -83,8 +83,8 @@ const singleTileStyles = StyleSheet.create({
 
     // Overlay Text over the Image
     overlayText: {
-        paddingLeft: 10,
-        paddingTop: 10,
+        paddingLeft: 15,
+        paddingTop: 15,
         color: 'white', 
         fontWeight: 'bold',
     },
