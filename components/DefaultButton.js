@@ -20,22 +20,27 @@ export default function DefaultButton({navigation,
     labelSize,
     btnColor,
     btnColorBorder,
-    btnTextColor}) {
+    btnTextColor,
+    smallButton}) {
 
     {/* Create a function that allows Navigation to the provided 'navigateTo' page.*/}
     const navRegistration = () => {
         navigation.navigate(navigateTo);
       };
 
+    {/* Re-adjust the Button's Size if it is a SmallButton */}
+    const vertPadding = smallButton ? {paddingVertical: 5} : {paddingVertical : 15}
+
     {/* Render the Component. */}
     return (
+        
         <TouchableOpacity 
-        style={[nextBtnStyles.pinkButton, {
+        style={[nextBtnStyles.button, {
             backgroundColor: btnColor,
             borderColor: btnColorBorder,
+            ...vertPadding,
         }]} 
-
-        onPress={navRegistration}>
+          onPress={navRegistration}>
             <Text style={{
                 fontSize: labelSize,
                 color: btnTextColor,
@@ -55,8 +60,7 @@ DefaultButton.defaultProps = {
 {/* Create the Styling for the Component. */}
 const nextBtnStyles = StyleSheet.create({
 
-    pinkButton: {
-        paddingVertical: 15,
+    button: {
         paddingHorizontal: 20,
         borderRadius: 5,
         alignItems: 'center',

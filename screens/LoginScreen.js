@@ -30,6 +30,7 @@ export default function LoginScreen({ navigation }) {
         navigation={navigation}
         navigateTo={'MealRegistrationPage'} 
         label={'Log In'}
+        smallButton={false}
         />
       </View>
 

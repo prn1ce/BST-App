@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet,TouchableOpacity } from 'react-native'
 
+import DefaultButton from './DefaultButton';
+
 {/* SingleTile Component
 
 Description: 
@@ -9,7 +11,15 @@ Description:
 Props: 
 1. label - The tile's name.
 2. imagePath - The image's path used in the Tile. */}
-export default function SingleTile({label, imagePath, tileHeight, tileWidth}) {
+export default function SingleTile({
+    label,
+    imagePath,
+    tileHeight,
+    tileWidth,
+    textSize,
+    subHeaderActive,
+    subHeaderText,
+    viewButton }) {
 
     {/* Render the Component. */}
     return (
@@ -20,8 +30,26 @@ export default function SingleTile({label, imagePath, tileHeight, tileWidth}) {
                         style={[singleTileStyles.rounded, {width: tileWidth, height: tileHeight}]}
                     />
                 </View>
+
                 <View style={[singleTileStyles.overlay, singleTileStyles.rounded]}>
-                    <Text style={singleTileStyles.overlayText}>{label}</Text>
+                    <Text style={[singleTileStyles.overlayText, {fontSize: textSize}]}>{label}</Text>
+
+                    {/* Add a Subheader if the User Wishes */}
+                    {subHeaderActive ? (
+                        <Text style={[singleTileStyles.overlayText, singleTileStyles.subheaderStyle]}>{subHeaderText}</Text>
+                    ) : ( 
+                        <></>
+                    )}
+                    
+                    {/* Add a View Button if the User Wishes */}
+                    {viewButton ? (
+                        <View style={{ position: 'absolute', bottom: 0, right: 0, paddingBottom: 10, paddingRight: 10 }}>
+                            <DefaultButton label={'View'} smallButton={true}/>
+                        </View>
+                    ) : (
+                        <></>
+                    )}
+
                 </View>
             </View>
         </TouchableOpacity>
@@ -32,6 +60,7 @@ export default function SingleTile({label, imagePath, tileHeight, tileWidth}) {
 SingleTile.defaultProps = {
     tileWidth: 200,
     tileHeight: 150,
+    textSize: 16,
 }
 
 {/* Create the styling for the Component */}
@@ -57,8 +86,13 @@ const singleTileStyles = StyleSheet.create({
         paddingLeft: 10,
         paddingTop: 10,
         color: 'white', 
-        fontSize: 16,
         fontWeight: 'bold',
+    },
+
+    subheaderStyle: {
+        paddingTop: 0, 
+        fontWeight: 'normal', 
+        fontSize: 12
     },
 
     // Image Style

@@ -1,5 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
+const defaultWidth = Dimensions.get('window').width - 40;
+
 {/* Export Styles: Use for Global */}
 export const styles = StyleSheet.create({
 
@@ -13,14 +15,14 @@ export const styles = StyleSheet.create({
   bodyContent: {
     flex: 1,
     justifyContent: 'center',
-    width: Dimensions.get('window').width - 40,
+    width: defaultWidth,
   },
 
   endContent: {
     flex: 0,
     margin: 20,
     gap: 10,
-    width: Dimensions.get('window').width - 40,
+    width: defaultWidth,
     justifyContent: 'center', 
   },
 
@@ -89,6 +91,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#FF65C3",
     height: 40,
-    width: Dimensions.get('window').width - 40,
+    width: defaultWidth,
   },
 });

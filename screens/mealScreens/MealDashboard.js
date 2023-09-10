@@ -3,8 +3,14 @@ import { View, Text, ScrollView, SafeAreaView, Image, StyleSheet, Dimensions } f
 import { styles } from '../styles';
 import HorizontalContent from '../../components/HorizontalContent';
 import CustomHeader from '../../components/CustomHeader';
+import SingleTile from '../../components/SingleTile';
+import Divider from '../../components/Divider';
 
 export default function MealDashboard() {
+
+    {/* Set the Default Width of the Application */}
+    const defaultWidth = Dimensions.get('window').width - 40;
+    const thumbnailTileHeight = Dimensions.get('window').width / 2;
 
     {/* The titles of the Recommended Meal Section  */}
     arrayTitles = [
@@ -30,11 +36,35 @@ export default function MealDashboard() {
             <ScrollView>
                 <View styles={styles.container}>
                     
-                    <View style={styles.bodyContent}>
+                    <View style={[styles.bodyContent, {gap: 20}]}>
 
-                        <View style={{paddingBottom: 20}}>
+                        <View>
                             <Text style={styles.pagesSubheading}>Nutrition is Key!</Text>
                         </View>
+
+                        <SingleTile 
+                            label={'Your Current Meal Plan'}
+                            imagePath={require('../../assets/mealScreensImages/dashboardSection/currentMealPlan.jpg')}
+                            tileWidth={defaultWidth}
+                            tileHeight={thumbnailTileHeight}
+                            textSize={18}
+                            subHeaderActive={true}
+                            subHeaderText={'Breakfast, Lunch and Dinner'}
+                            viewButton={true}
+                        />
+
+                        <SingleTile 
+                            label={'Your Current Meal Plan'}
+                            imagePath={require('../../assets/mealScreensImages/dashboardSection/macroDetails.jpg')}
+                            tileWidth={defaultWidth}
+                            tileHeight={thumbnailTileHeight}
+                            textSize={18}
+                            subHeaderActive={true}
+                            subHeaderText={'Track your current macro progress.'}
+                            viewButton={true}
+                        />
+
+                        <Divider />
 
                         {/* The Horizontal Scroll Content. */}
                         <HorizontalContent 

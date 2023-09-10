@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
+import Divider from './Divider';
+
 {/* CustomerHeader Component
 
 Description: Use the Component to generate the Header of the Page and to follow a 
@@ -24,7 +26,7 @@ export default function CustomHeader({ title, showLogo }) {
         ) : (
             <View style={customerHeaderStyles.header}>
                 <Text style={customerHeaderStyles.title}>{title}</Text>
-                <View style={customerHeaderStyles.divider}></View>
+                <Divider />
             </View>
         )}
         </SafeAreaView>
@@ -47,12 +49,6 @@ const customerHeaderStyles = StyleSheet.create({
         color: 'white',
         fontSize: 18,
         fontWeight: 'bold',
-    },
-
-    divider: {
-        height: 0.5,
-        backgroundColor: '#272727',
-        width: Dimensions.get('window').width - 40,
     },
 
     /* Styling for Logo Header */
