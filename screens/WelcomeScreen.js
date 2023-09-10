@@ -39,7 +39,9 @@ export default function WelcomeScreen({ navigation }) {
             label={'Log In'}
             onPress={() => navigation.navigate('LoginScreen')}
             navigation={navigation}
-            navigateTo={'LoginScreen'} />
+            navigateTo={'LoginScreen'}
+            btnColor={'transparent'}
+            btnColorBorder={'white'} />
         </View>
 
       </SafeAreaView>

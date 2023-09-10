@@ -56,7 +56,7 @@ DefaultButton.defaultProps = {
 const nextBtnStyles = StyleSheet.create({
 
     pinkButton: {
-        paddingVertical: 10,
+        paddingVertical: 15,
         paddingHorizontal: 20,
         borderRadius: 5,
         alignItems: 'center',

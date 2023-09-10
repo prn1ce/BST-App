@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Text } from 'react-native';
+import { View, TextInput, StyleSheet, Text, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 {/* InputField Component
 
@@ -13,16 +13,22 @@ Props:
 */}
 export default function InputField({ placeholder, label, fontSize }) {
 
+    const handleTapOutside = () => {
+        Keyboard.dismiss();
+    }
+
     {/* Render the Component */}
     return (
-        <View style={inputFieldStyles.container}>
-            <Text style={[inputFieldStyles.textStyle, {fontSize: fontSize}]}>{label}</Text>
-            <TextInput 
-                style={inputFieldStyles.inputStyle}
-                placeholder={placeholder}
-                placeholderTextColor={'gray'}
-                />
-        </View>
+        <TouchableWithoutFeedback onPress={handleTapOutside}>
+            <View style={inputFieldStyles.container}>
+                <Text style={[inputFieldStyles.textStyle, {fontSize: fontSize}]}>{label}</Text>
+                <TextInput 
+                    style={inputFieldStyles.inputStyle}
+                    placeholder={placeholder}
+                    placeholderTextColor={'gray'}
+                    />
+            </View>
+        </TouchableWithoutFeedback>
     )
 }
 
@@ -44,10 +50,11 @@ const inputFieldStyles = StyleSheet.create({
     },
 
     inputStyle: {
-        padding: 5,
+        padding: 10,
         borderColor: 'white',
         borderRadius: 5, 
         borderWidth: 1,
+        color: 'white',
     },
 
 })
