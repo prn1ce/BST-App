@@ -14,7 +14,8 @@ Props:
 5. btnColor - Specifies what colour the button is, default value is Transparent. 
 6. btnColorBorder - Specifies what colour the button's border is, default value is White. 
 7. btnTextColor - Specifies what colour the button's text is, default value is White. */}
-export default function DefaultButton({navigation, 
+export default function DefaultButton({
+    navigation, 
     navigateTo,
     label,
     labelSize,

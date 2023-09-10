@@ -6,7 +6,7 @@ import CustomHeader from '../../components/CustomHeader';
 import SingleTile from '../../components/SingleTile';
 import Divider from '../../components/Divider';
 
-export default function MealDashboard() {
+export default function MealDashboard({ navigation }) {
 
     {/* Set the Default Width of the Application */}
     const defaultWidth = Dimensions.get('window').width - 40;
@@ -53,6 +53,8 @@ export default function MealDashboard() {
                             subHeaderActive={true}
                             subHeaderText={'Breakfast, Lunch and Dinner'}
                             viewButton={true}
+                            navigation={navigation}
+                            navigateTo={'CurrentMealPlanPage'}
                         />
 
                         {/* Add Your Current Macro Details Viewing */}

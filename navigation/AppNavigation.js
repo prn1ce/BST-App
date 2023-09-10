@@ -8,6 +8,7 @@ import RegisterScreen_PG2 from '../screens/registrationScreens/RegisterScreen_PG
 import RegisterScreen_PG3 from '../screens/registrationScreens/RegisterScreen_PG3';
 import MealRegistrationPage from '../screens/registrationScreens/MealRegistrationPage';
 import MealDashboard from '../screens/mealScreens/MealDashboard';
+import CurrentMealPlanPage from '../screens/mealScreens/CurrentMealPlanPage';
 
 const Stack = createNativeStackNavigator(); 
 
@@ -22,6 +23,7 @@ export default function AppNavigation() {
             <Stack.Screen name="LoginScreen" options={{headerShown: false}} component={LoginScreen} />
             <Stack.Screen name="MealRegistrationPage" options={{headerShown: false}} component={MealRegistrationPage} />
             <Stack.Screen name="MealDashboard" options={{headerShown: false}} component={MealDashboard} />
+            <Stack.Screen name="CurrentMealPlanPage" options={{headerShown: false}} component={CurrentMealPlanPage} />
         </Stack.Navigator>
     </NavigationContainer>
   )

@@ -19,7 +19,9 @@ export default function SingleTile({
     textSize,
     subHeaderActive,
     subHeaderText,
-    viewButton }) {
+    viewButton,
+    navigation,
+    navigateTo }) {
 
     {/* Render the Component. */}
     return (
@@ -44,7 +46,12 @@ export default function SingleTile({
                     {/* Add a View Button if the User Wishes */}
                     {viewButton ? (
                         <View style={{ position: 'absolute', bottom: 0, right: 0, paddingBottom: 10, paddingRight: 10 }}>
-                            <DefaultButton label={'View'} smallButton={true}/>
+                            <DefaultButton 
+                            label={'View'} 
+                            smallButton={true} 
+                            onPress={() => navigation.navigate({navigateTo})}
+                            navigation={navigation} 
+                            navigateTo={navigateTo}/>
                         </View>
                     ) : (
                         <></>
