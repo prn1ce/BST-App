@@ -5,6 +5,7 @@ import HorizontalContent from '../../components/HorizontalContent';
 import CustomHeader from '../../components/CustomHeader';
 import SingleTile from '../../components/SingleTile';
 import Divider from '../../components/Divider';
+import CustomTab from '../../components/CustomTab';
 
 export default function MealDashboard({ navigation }) {
 
@@ -13,14 +14,14 @@ export default function MealDashboard({ navigation }) {
     const thumbnailTileHeight = Dimensions.get('window').width / 2;
 
     {/* The titles of the Recommended Meal Section  */}
-    arrayTitles = [
+    const arrayTitles = [
         'Breakfast Recommendations',
         'Lunch Recommendations',
         'Dinner Recommendations'
     ];
 
     {/* The image paths of the Recommended Meal Section  */}
-    arrayImages = [
+    const arrayImages = [
         require('../../assets/mealScreensImages/dashboardSection/breakfastRec.png'),
         require('../../assets/mealScreensImages/dashboardSection/lunchRec.png'),
         require('../../assets/mealScreensImages/dashboardSection/dinnerRec.png'),
@@ -81,8 +82,9 @@ export default function MealDashboard({ navigation }) {
 
                     </View>
                 </View>
-            </ScrollView>
 
+                <CustomTab />
+            </ScrollView>
         </SafeAreaView>
     )
 }
