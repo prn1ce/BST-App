@@ -15,7 +15,7 @@ export default function CurrentMealPlanPage({ navigation }) {
         <SafeAreaView style={styles.container}>
 
             {/* Add the Header */}
-            <CustomHeader title={'Your Current Meal Plan'} showLogo={false}/>
+            <CustomHeader title={'Your Current Meals Plan'} showLogo={false}/>
 
             <ScrollView>
                 <View style={[styles.bodyContent, {gap: 20}]}>
