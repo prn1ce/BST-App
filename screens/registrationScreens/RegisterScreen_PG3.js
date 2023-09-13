@@ -191,9 +191,9 @@ export default function RegisterScreen_PG3({ navigation }) {
                     {/* Area 3: Bottom */}
                     <View style={styles.endContent}>
                         <DefaultButton
-                            onPress={() => navigation.navigate('RegisterScreen_PG3')} 
+                            onPress={() => navigation.navigate('TrainingDashboard')} 
                             navigation={navigation} 
-                            navigateTo={'RegisterScreen_PG3'}
+                            navigateTo={'TrainingDashboard'}
                             label={'Start Training!'} />
                     </View>                    
 

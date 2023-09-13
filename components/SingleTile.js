@@ -29,7 +29,8 @@ export default function SingleTile({
             <View style={{height: tileHeight, width: tileWidth}}>
                 <View style={{flex: 2}}>
                     <Image source={imagePath}
-                        style={[singleTileStyles.rounded, {width: tileWidth, height: tileHeight}]}
+                        style={[singleTileStyles.rounded, singleTileStyles.imageStyle]}
+                        resizeMode="cover"
                     />
                 </View>
 
@@ -104,7 +105,7 @@ const singleTileStyles = StyleSheet.create({
 
     // Image Style
     imageStyle: {
-        flex: 1,
-        resizeMode: 'cover',
+        height: '100%',
+        width: '100%'
     },
 })

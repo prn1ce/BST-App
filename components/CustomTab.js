@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screens/HomeScreen';
 import TrainingDashboard from '../screens/trainingScreens/TrainingDashboard';
-import MealDashboard from '../screens/mealScreens/MealDashboard';
 
 const Tab = createBottomTabNavigator();
 

@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, ScrollView, SafeAreaView, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView, Dimensions } from 'react-native'
 import { styles } from '../styles';
 import HorizontalContent from '../../components/HorizontalContent';
 import CustomHeader from '../../components/CustomHeader';
 import SingleTile from '../../components/SingleTile';
 import Divider from '../../components/Divider';
-import CustomTab from '../../components/CustomTab';
 
 export default function MealDashboard({ navigation }) {
 
@@ -35,8 +34,7 @@ export default function MealDashboard({ navigation }) {
             <CustomHeader title={'Nutrition Dashboard'} showLogo={false}/>
 
             <ScrollView>
-                <View styles={styles.container}>
-                    
+                <View>
                     <View style={[styles.bodyContent, {gap: 20}]}>
 
                         {/* Add the Header */}
@@ -82,8 +80,6 @@ export default function MealDashboard({ navigation }) {
 
                     </View>
                 </View>
-
-                <CustomTab />
             </ScrollView>
         </SafeAreaView>
     )

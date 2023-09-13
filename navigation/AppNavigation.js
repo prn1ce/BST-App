@@ -12,6 +12,7 @@ import MealDashboard from '../screens/mealScreens/MealDashboard';
 import CurrentMealPlanPage from '../screens/mealScreens/CurrentMealPlanPage';
 import MealInformationPage from '../screens/mealScreens/MealInformationPage';
 import TrainingDashboard from '../screens/trainingScreens/TrainingDashboard';
+import TrainingSession from '../screens/trainingScreens/TrainingSession';
 import CustomTab from '../components/CustomTab';
 
 const Stack = createNativeStackNavigator(); 
@@ -31,7 +32,7 @@ export default function AppNavigation() {
             <Stack.Screen name="CurrentMealPlanPage" options={{headerShown: false}} component={CurrentMealPlanPage} />
             <Stack.Screen name="MealInformationPage" options={{headerShown: false}} component={MealInformationPage} />
             <Stack.Screen name="TrainingDashboard" options={{headerShown: false}} component={TrainingDashboard} />
-            <Stack.Screen name="CustomTab" component={CustomTab} />
+            <Stack.Screen name="TrainingSession" options={{headerShown: false}} component={TrainingSession} />
         </Stack.Navigator>
     </NavigationContainer>
   )
