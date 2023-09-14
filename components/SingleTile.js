@@ -19,13 +19,21 @@ export default function SingleTile({
     textSize,
     subHeaderActive,
     subHeaderText,
-    viewButton,
+    buttonVisible,
+    buttonLabel,
     navigation,
-    navigateTo }) {
+    navigateTo, 
+    borderActive
+    }) {
+
+    {/* Re-adjust the Button's Size if it is a SmallButton */}
+    const borderHighlight = borderActive ? 
+    {borderWidth: 1, borderRadius: 5, borderColor: '#FF65C3'} : 
+    {borderWidth: 0, borderRadius: 0 }
 
     {/* Render the Component. */}
     return (
-        <TouchableOpacity>
+        <TouchableOpacity style={borderHighlight}>
             <View style={{height: tileHeight, width: tileWidth}}>
                 <View style={{flex: 2}}>
                     <Image source={imagePath}
@@ -44,11 +52,11 @@ export default function SingleTile({
                         <></>
                     )}
                     
-                    {/* Add a View Button if the User Wishes */}
-                    {viewButton ? (
+                    {/* Add a Button if the User Wishes */}
+                    {buttonVisible ? (
                         <View style={{ position: 'absolute', bottom: 0, right: 0, paddingBottom: 10, paddingRight: 10 }}>
                             <DefaultButton 
-                            label={'View'} 
+                            label={buttonLabel} 
                             smallButton={true} 
                             onPress={() => navigation.navigate(navigateTo)}
                             navigation={navigation} 
@@ -69,6 +77,7 @@ SingleTile.defaultProps = {
     tileWidth: 200,
     tileHeight: 150,
     textSize: 16,
+    buttonLabel: 'View'
 }
 
 {/* Create the styling for the Component */}

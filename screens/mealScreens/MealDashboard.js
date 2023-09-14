@@ -51,7 +51,7 @@ export default function MealDashboard({ navigation }) {
                             textSize={18}
                             subHeaderActive={true}
                             subHeaderText={'Breakfast, Lunch and Dinner'}
-                            viewButton={true}
+                            buttonVisible={true}
                             navigation={navigation}
                             navigateTo={'CurrentMealPlanPage'}
                         />
@@ -65,7 +65,7 @@ export default function MealDashboard({ navigation }) {
                             textSize={18}
                             subHeaderActive={true}
                             subHeaderText={'Track your current macro progress.'}
-                            viewButton={true}
+                            buttonVisible={true}
                         />
 
                         {/* Divide */}

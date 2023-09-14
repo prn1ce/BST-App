@@ -28,6 +28,30 @@ export default function TrainingDashboard({navigation}) {
         require('../../assets/trainingScreensImages/dashboardSection/chest.png'),
     ];
 
+    {/* Set the Label for the Tile Titles in the Page */}
+    const tileTitles = [
+        'Track your Progress',
+        'Your workout for the Day!',
+    ]
+
+    {/* Set the Label for the Tile Images in the Page */}
+    const tileImages = [
+        require('../../assets/trainingScreensImages/dashboardSection/track-progress.jpg'),
+        require('../../assets/trainingScreensImages/dashboardSection/workoutday.jpeg'),
+    ]
+
+    {/* Set the Label for the Tile Subheaders in the Page */}
+    const tileSubheaders = [
+        'You’re doing really well, click here to view your progress',
+        'Your focused workout for today.',
+    ]
+
+    {/* Set the Label for the Tile Navigators in the Page */}
+    const tileNavigators = [
+        '',
+        'TrainingSession'
+    ]
+ 
     return (
         <SafeAreaView style={styles.container}>
         
@@ -43,33 +67,22 @@ export default function TrainingDashboard({navigation}) {
                         <Text style={styles.header}>Your health, is wealth.</Text>
                     </View>
 
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <SingleTile 
-                        label={'Track your Progress'}
-                        imagePath={require('../../assets/trainingScreensImages/dashboardSection/track-progress.jpg')}
-                        tileWidth={defaultWidth}
-                        tileHeight={thumbnailTileHeight}
-                        textSize={18}
-                        subHeaderActive={true}
-                        subHeaderText={'You’re doing really well, click here to view your progress'}
-                        viewButton={true}
-                        // navigation={navigation}
-                        // navigateTo={'CurrentMealPlanPage'}
-                    />
-
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <SingleTile 
-                        label={'Your workout for the Day!'}
-                        imagePath={require('../../assets/trainingScreensImages/dashboardSection/workoutday.jpeg')}
-                        tileWidth={defaultWidth}
-                        tileHeight={thumbnailTileHeight}
-                        textSize={18}
-                        subHeaderActive={true}
-                        subHeaderText={'Your focused workout for today.'}
-                        viewButton={true}
-                        navigation={navigation}
-                        navigateTo={'TrainingSession'}
-                    />
+                    {/* Render the Content Tiles in the Page. */}
+                    {tileTitles.map((title, index) => (
+                        <SingleTile 
+                            label={title}
+                            imagePath={tileImages[index]}
+                            tileWidth={defaultWidth}
+                            tileHeight={thumbnailTileHeight}
+                            textSize={18}
+                            subHeaderActive={true}
+                            subHeaderText={tileSubheaders[index]}
+                            buttonVisible={true}
+                            navigation={navigation}
+                            navigateTo={tileNavigators[index]}
+                            key={index}
+                        />
+                    ))}
 
                     {/* Divide */}
                     <Divider />

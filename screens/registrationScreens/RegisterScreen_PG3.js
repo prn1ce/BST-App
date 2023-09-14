@@ -6,7 +6,7 @@ import CustomHeader from '../../components/CustomHeader';
 import InputField from '../../components/InputField';
 import CheckBox from '../../components/CheckBox';
 import DefaultButton from '../../components/DefaultButton';
-
+    
 export default function RegisterScreen_PG3({ navigation }) {
 
     {/* Define the Gap between Headers and Element  */}
@@ -195,7 +195,7 @@ export default function RegisterScreen_PG3({ navigation }) {
                             navigation={navigation} 
                             navigateTo={'TrainingDashboard'}
                             label={'Start Training!'} />
-                    </View>                    
+                    </View>                     
 
                 </View>
 
