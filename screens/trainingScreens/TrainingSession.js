@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, SafeAreaView, Dimensions } from 'react-native'
 import { styles } from '../styles';
-import HorizontalContent from '../../components/HorizontalContent';
 import CustomHeader from '../../components/CustomHeader';
 import SingleTile from '../../components/SingleTile';
 import Divider from '../../components/Divider';
@@ -35,7 +34,7 @@ export default function TrainingSession({navigation}) {
         <SafeAreaView style={styles.container}>
         
             {/* Add the Header */}
-            <CustomHeader title={'Training Session'} showLogo={false}/>
+            <CustomHeader title={'Training Session'} showLogo={false} showButton={true} />
 
             <ScrollView>
             
@@ -73,7 +72,6 @@ export default function TrainingSession({navigation}) {
                 </View>
 
             </ScrollView>
-
 
         </SafeAreaView>
     )

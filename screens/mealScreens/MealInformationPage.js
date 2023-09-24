@@ -26,7 +26,7 @@ export default function MealInformationPage() {
         <SafeAreaView style={styles.container}>
 
             {/* Add the Header */}
-            <CustomHeader title={'Singaporean Noodles'} showLogo={false}/>
+            <CustomHeader title={'Singaporean Noodles'} showLogo={false} showButton={true}/>
 
             {/* Body Content */}
             <ScrollView>

@@ -15,6 +15,7 @@ Props:
 6. btnColorBorder - Specifies what colour the button's border is, default value is White. 
 7. btnTextColor - Specifies what colour the button's text is, default value is White. */}
 export default function DefaultButton({
+    stackName,
     navigation, 
     navigateTo,
     label,
@@ -27,7 +28,7 @@ export default function DefaultButton({
 
     {/* Create a function that allows Navigation to the provided 'navigateTo' page.*/}
     const navRegistration = () => {
-        navigation.navigate(navigateTo);
+        navigation.navigate(stackName, {screen: navigateTo});
       };
 
     {/* Create the Button so that it is Versatile and can handle various behaviours. */}
@@ -35,7 +36,7 @@ export default function DefaultButton({
         if (onPress) {
             onPress();
         } else if (navigateTo) {
-            navRegistration
+            navRegistration();
         }
     }
 
