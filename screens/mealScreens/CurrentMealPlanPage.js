@@ -34,7 +34,7 @@ export default function CurrentMealPlanPage({ navigation }) {
                     textSize={18}
                     subHeaderActive={true}
                     subHeaderText={'Start your day off with some delicious, nutritious pancakes.'}
-                    viewButton={true}
+                    buttonVisible={true}
                     />
 
                     <Divider />
@@ -53,7 +53,7 @@ export default function CurrentMealPlanPage({ navigation }) {
                     textSize={18}
                     subHeaderActive={true}
                     subHeaderText={'The perfect, midday treat for you!'}
-                    viewButton={true}
+                    buttonVisible={true}
                     navigation={navigation}
                     navigateTo={'MealInformationPage'}
                     />
@@ -74,7 +74,7 @@ export default function CurrentMealPlanPage({ navigation }) {
                     textSize={18}
                     subHeaderActive={true}
                     subHeaderText={'End your day with a healthy meal.'}
-                    viewButton={true}
+                    buttonVisible={true}
                     />
 
                     <Divider />

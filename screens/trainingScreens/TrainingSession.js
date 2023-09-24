@@ -13,6 +13,24 @@ export default function TrainingSession({navigation}) {
     const defaultWidth = Dimensions.get('window').width - 40;
     const thumbnailTileHeight = Dimensions.get('window').height / 6;
 
+    {/* Set the Tile Titles to display in the Content Area. */}
+    const tileTitles = [
+        '3x Bodyweight Squats',
+        '3x High Knees',
+        '3x Alternating Lunges with Twist',
+        '3x Band Deadlift',
+        'x10 Push Ups',
+    ]
+
+    {/* Set the Tile Images to display in the Content Area. */}
+    const tileImages = [
+        require('../../assets/trainingScreensImages/trainingSessionSection/squat.jpg'),
+        require('../../assets/trainingScreensImages/trainingSessionSection/high-knees.jpg'),
+        require('../../assets/trainingScreensImages/trainingSessionSection/lunges.jpg'),
+        require('../../assets/trainingScreensImages/trainingSessionSection/deadlift.jpg'),
+        require('../../assets/trainingScreensImages/trainingSessionSection/pushup.jpg')
+    ]
+
     return (
         <SafeAreaView style={styles.container}>
         
@@ -28,66 +46,26 @@ export default function TrainingSession({navigation}) {
                         <Text style={styles.header}>Training: Home Workout (Beginner) </Text>
                     </View>
 
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <View style={{borderWidth: 1, borderRadius: 5, borderColor: '#FF65C3'}}>
-                        <SingleTile 
-                            label={'3x Bodyweight Squats'}
-                            imagePath={require('../../assets/trainingScreensImages/trainingSessionSection/squat.jpg')}
-                            tileWidth={defaultWidth}
-                            tileHeight={thumbnailTileHeight}
-                            textSize={18}
-                            viewButton={true}
-                        />
-                    </View>
+                    {/* Render the Content */}
+                    {tileTitles.map((item, index) => (
+                        <React.Fragment key={index}>
 
-                    <DividerVertical colour={'#FF65C3'}/>
+                            {/* Render the Content Tile */}
+                            <SingleTile 
+                                label={item} 
+                                imagePath={tileImages[index]}
+                                tileWidth={defaultWidth}
+                                tileHeight={thumbnailTileHeight}
+                                textSize={18}
+                                buttonVisible={true}  
+                                buttonLabel={'>'}
+                            />
 
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <SingleTile 
-                        label={'3x High Knees'}
-                        imagePath={require('../../assets/trainingScreensImages/trainingSessionSection/high-knees.jpg')}
-                        tileWidth={defaultWidth}
-                        tileHeight={thumbnailTileHeight}
-                        textSize={18}
-                        viewButton={true}
-                    />
-
-                    <DividerVertical />
-
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <SingleTile 
-                        label={'3x Alternating Lunges with Twist'}
-                        imagePath={require('../../assets/trainingScreensImages/trainingSessionSection/lunges.jpg')}
-                        tileWidth={defaultWidth}
-                        tileHeight={thumbnailTileHeight}
-                        textSize={18}
-                        viewButton={true}
-                    />
-
-                    <DividerVertical />
-
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <SingleTile 
-                        label={'3x Band Deadlift'}
-                        imagePath={require('../../assets/trainingScreensImages/trainingSessionSection/deadlift.jpg')}
-                        tileWidth={defaultWidth}
-                        tileHeight={thumbnailTileHeight}
-                        textSize={18}
-                        viewButton={true}
-                    />
-
-                    <DividerVertical />
-                    
-                    {/* Add Your Current Meal Plan Viewing */}
-                    <SingleTile 
-                        label={'x10 Push Ups'}
-                        imagePath={require('../../assets/trainingScreensImages/trainingSessionSection/pushup.jpg')}
-                        tileWidth={defaultWidth}
-                        tileHeight={thumbnailTileHeight}
-                        textSize={18}
-                        viewButton={true}
-                    />
-
+                            {/* Render a Vertical Divider */}
+                            {index !== tileImages.length - 1 && <DividerVertical />}
+                            
+                        </React.Fragment>
+                    ))}
 
                     {/* Divide */}
                     <Divider />

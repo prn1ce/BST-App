@@ -52,7 +52,7 @@ export default function TrainingDashboard({navigation}) {
                         textSize={18}
                         subHeaderActive={true}
                         subHeaderText={'You’re doing really well, click here to view your progress'}
-                        viewButton={true}
+                        buttonVisible={true}
                         // navigation={navigation}
                         // navigateTo={'CurrentMealPlanPage'}
                     />
@@ -66,7 +66,7 @@ export default function TrainingDashboard({navigation}) {
                         textSize={18}
                         subHeaderActive={true}
                         subHeaderText={'Your focused workout for today.'}
-                        viewButton={true}
+                        buttonVisible={true}
                         navigation={navigation}
                         navigateTo={'TrainingSession'}
                     />

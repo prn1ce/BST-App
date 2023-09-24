@@ -15,7 +15,7 @@ export default function Divider({ height, colour }) {
 }
 
 Divider.defaultProps = {
-    height: Dimensions.get('window').height / 12,
+    height: Dimensions.get('window').height / 20,
     colour: 'white'
 };
 

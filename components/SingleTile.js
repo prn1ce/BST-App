@@ -19,7 +19,8 @@ export default function SingleTile({
     textSize,
     subHeaderActive,
     subHeaderText,
-    viewButton,
+    buttonVisible,
+    buttonLabel,
     navigation,
     navigateTo }) {
 
@@ -45,10 +46,10 @@ export default function SingleTile({
                     )}
                     
                     {/* Add a View Button if the User Wishes */}
-                    {viewButton ? (
+                    {buttonVisible ? (
                         <View style={{ position: 'absolute', bottom: 0, right: 0, paddingBottom: 10, paddingRight: 10 }}>
                             <DefaultButton 
-                            label={'View'} 
+                            label={buttonLabel} 
                             smallButton={true} 
                             onPress={() => navigation.navigate(navigateTo)}
                             navigation={navigation} 
@@ -69,6 +70,7 @@ SingleTile.defaultProps = {
     tileWidth: 200,
     tileHeight: 150,
     textSize: 16,
+    buttonLabel: 'View'
 }
 
 {/* Create the styling for the Component */}
