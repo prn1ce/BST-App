@@ -88,15 +88,9 @@ export const styles = StyleSheet.create({
   },
 
   /* Define: Global Components */
-  pinkButton: {
-    borderRadius: 5,
-    paddingHorizontal: 100,
-    alignItems: 'center',
-    justifyContent: 'center', 
-    backgroundColor: "#FF65C3",
-    borderWidth: 1,
-    borderColor: "#FF65C3",
-    height: 40,
-    width: defaultWidth,
+  rightText: {
+    color: '#FF65C3',
+    fontSize: 12,
+    textDecorationLine: 'underline',
   },
 });

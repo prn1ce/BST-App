@@ -11,7 +11,13 @@ Props:
 2. label - The label of the Text Input.
 
 */}
-export default function InputField({ placeholder, label, fontSize }) {
+export default function InputField({ 
+    placeholder,
+    placeholderColour,
+    label,
+    fontSize,
+    bgColour,
+    }) {
 
     const handleTapOutside = () => {
         Keyboard.dismiss();
@@ -23,9 +29,9 @@ export default function InputField({ placeholder, label, fontSize }) {
             <View style={inputFieldStyles.container}>
                 <Text style={[inputFieldStyles.textStyle, {fontSize: fontSize}]}>{label}</Text>
                 <TextInput 
-                    style={inputFieldStyles.inputStyle}
+                    style={[inputFieldStyles.inputStyle, {backgroundColor: bgColour}]}
                     placeholder={placeholder}
-                    placeholderTextColor={'gray'}
+                    placeholderTextColor={placeholderColour}
                     />
             </View>
         </TouchableWithoutFeedback>
@@ -35,6 +41,8 @@ export default function InputField({ placeholder, label, fontSize }) {
 {/* Create the Default Styling for the Component. */}
 InputField.defaultProps = {
     fontSize: 12,
+    placeholderColour: 'gray',
+    bgColour: 'transparent'
 };
 
 {/* Create the Styling for the Component */}
@@ -54,7 +62,6 @@ const inputFieldStyles = StyleSheet.create({
         borderColor: 'white',
         borderRadius: 5, 
         borderWidth: 1,
-        color: 'white',
     },
 
 })

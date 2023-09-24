@@ -10,6 +10,12 @@ import CustomHeader from '../components/CustomHeader';
 {/* Create the Register Screen: Page 1 */}
 export default function LoginScreen({ navigation }) {
 
+  const handleLogin = () => {
+    // You can put any login logic here, and navigate afterward if needed.
+    // For this example, we're simply navigating to the "Home" screen.
+    navigation.navigate('Main', { screen: 'Home' });
+  };
+
   {/* Render the Page. */}
   return (
     <SafeAreaView style={styles.container}>
@@ -26,9 +32,10 @@ export default function LoginScreen({ navigation }) {
       {/* Area 3: Bottom */}
       <View style={styles.endContent}>
         <DefaultButton 
-        onPress={() => navigation.navigate('MealRegistrationPage')}
+        onPress={handleLogin}
+        stackName={'Main'}
         navigation={navigation}
-        navigateTo={'MealRegistrationPage'} 
+        navigateTo={'HomeScreen'} 
         label={'Log In'}
         smallButton={false}
         />

@@ -35,7 +35,7 @@ export default function MealDashboard({ navigation }) {
 
             <ScrollView>
                 <View>
-                    <View style={[styles.bodyContent, {gap: 20}]}>
+                    <View style={[styles.bodyContent, {gap: 20, paddingBottom: 20}]}>
 
                         {/* Add the Header */}
                         <View>
@@ -72,12 +72,14 @@ export default function MealDashboard({ navigation }) {
                         <Divider />
 
                         {/* The Horizontal Scroll Content. */}
-                        <HorizontalContent 
-                        titleArray={arrayTitles}
-                        imageArray={arrayImages}
-                        headingTitle={'Recommended Meals for you!'} 
-                        />
-
+                        <View>
+                            <HorizontalContent 
+                            titleArray={arrayTitles}
+                            imageArray={arrayImages}
+                            headingTitle={'Recommended Meals for you!'} 
+                            rightText={'See All'}
+                            />
+                        </View>
                     </View>
                 </View>
             </ScrollView>

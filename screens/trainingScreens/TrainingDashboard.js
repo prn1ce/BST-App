@@ -48,7 +48,7 @@ export default function TrainingDashboard({navigation}) {
 
     {/* Set the Label for the Tile Navigators in the Page */}
     const tileNavigators = [
-        '',
+        'HomeScreen',
         'TrainingSession'
     ]
  
@@ -60,7 +60,7 @@ export default function TrainingDashboard({navigation}) {
 
             <ScrollView>
             
-                <View style={[styles.bodyContent, {gap: 20}]}>
+                <View style={[styles.bodyContent, {gap: 20, paddingBottom: 20}]}>
 
                     {/* Add the Header */}
                     <View>

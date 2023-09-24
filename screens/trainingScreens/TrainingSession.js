@@ -35,7 +35,7 @@ export default function TrainingSession({navigation}) {
         <SafeAreaView style={styles.container}>
         
             {/* Add the Header */}
-            <CustomHeader title={'Training Session'} showLogo={false}/>
+            <CustomHeader title={'Training Session'} showLogo={false} showButton={true} />
 
             <ScrollView>
             
