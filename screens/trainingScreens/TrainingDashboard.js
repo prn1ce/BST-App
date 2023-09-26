@@ -60,7 +60,7 @@ export default function TrainingDashboard({navigation}) {
 
             <ScrollView>
             
-                <View style={[styles.bodyContent, {gap: 20, paddingBottom: 20}]}>
+                <View style={[styles.bodyContent, {gap: 20, marginVertical: 20, paddingBottom: 50}]}>
 
                     {/* Add the Header */}
                     <View>

@@ -10,6 +10,7 @@ import CustomHeader from '../components/CustomHeader';
 {/* Create the Register Screen: Page 1 */}
 export default function LoginScreen({ navigation }) {
 
+  {/* Create a function to Handle the Navigation between screens. */}
   const handleLogin = () => {
     // You can put any login logic here, and navigate afterward if needed.
     // For this example, we're simply navigating to the "Home" screen.

@@ -2,6 +2,9 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import FontAwesome from 'react-native-vector-icons/FontAwesome'; 
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 {/* Import the AuthStack */}
 import WelcomeScreen from '../screens/WelcomeScreen';
@@ -58,10 +61,52 @@ const NutritionStack = () => (
 
 /* Create the Main Tabs and its Navigation. */
 const MainTabs = () => (
-  <Tab.Navigator>
-    <Tab.Screen name="HomeScreen" options={{headerShown: false}} component={HomeScreen} />
-    <Tab.Screen name="Training" options={{headerShown: false}} component={TrainingStack} />
-    <Tab.Screen name="Nutrition" options={{headerShown: false}} component={NutritionStack} />
+  <Tab.Navigator
+    screenOptions={{
+      tabBarActiveTintColor: '#FF65C3',
+      tabBarInactiveTintColor: 'white',
+      tabBarStyle: {
+        height: 60,
+        position: 'absolute',
+        backgroundColor: '#272727',
+        borderColor: 'white',
+        alignItems: 'center', 
+        justifyContent: 'center', 
+      }
+    }}
+  >
+    <Tab.Screen 
+      name="HomeScreen" 
+      options={{
+        headerShown: false,
+        tabBarLabel: '',
+        tabBarIcon: ({color, size}) => (
+          <FontAwesome name="home" color={color} size={30} style={{ marginTop: 15 }} />
+        )  
+      }} 
+      component={HomeScreen} />
+
+    <Tab.Screen 
+      name="Training" 
+      options={{
+        headerShown: false,
+        tabBarLabel: '',
+        tabBarIcon: ({color, size}) => (
+          <FontAwesome5 name="dumbbell" color={color} size={23} style={{ marginTop: 15 }} />
+        )
+        }} 
+      component={TrainingStack} />
+
+    <Tab.Screen 
+      name="Nutrition" 
+      options={{
+        headerShown: false,
+        tabBarLabel: '',
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="food-apple" color={color} size={26} style={{ marginTop: 14 }} />
+        )
+        }} 
+      component={NutritionStack} />
   </Tab.Navigator>
 )
 

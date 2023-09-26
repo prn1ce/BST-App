@@ -18,7 +18,7 @@ export default function CurrentMealPlanPage({ navigation }) {
             <CustomHeader title={'Your Current Meals Plan'} showLogo={false} showButton={true}/>
 
             <ScrollView>
-                <View style={[styles.bodyContent, {gap: 20}]}>
+                <View style={[styles.bodyContent, {gap: 20, marginVertical: 20, paddingBottom: 50}]}>
 
                     {/* Add the Header */}
                     <View>
@@ -76,8 +76,6 @@ export default function CurrentMealPlanPage({ navigation }) {
                     subHeaderText={'End your day with a healthy meal.'}
                     buttonVisible={true}
                     />
-
-                    <Divider />
 
                 </View>
             </ScrollView>

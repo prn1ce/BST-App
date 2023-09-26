@@ -38,7 +38,7 @@ export default function TrainingSession({navigation}) {
 
             <ScrollView>
             
-                <View style={[styles.bodyContent, {gap: 20}]}>
+                <View style={[styles.bodyContent, {gap: 20, marginVertical: 20, paddingBottom: 50}]}>
 
                     {/* Add the Header */}
                     <View>
@@ -67,7 +67,6 @@ export default function TrainingSession({navigation}) {
                     ))}
 
                     {/* Divide */}
-                    <Divider />
 
                 </View>
 

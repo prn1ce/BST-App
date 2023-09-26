@@ -26,19 +26,19 @@ export default function CustomHeader({ title, showLogo, showButton, titleAlignme
             />
             </View>
         ) : (
-            <View style={customerHeaderStyles.header}>
+            <View style={[customerHeaderStyles.header]}>
 
                 {/* Render the Back Button if needed. */}
-                {showButton ? (
-                    <View style={customerHeaderStyles.btnContainer}>
+                <View style={{flexDirection: 'row', gap: 10}}>
+                    {showButton ? (
                         <BackButton />
-                    </View>
-                ) : null}
+                    ) : null}
 
-                <View style={{alignItems: titleAlignment, justifyContent: 'center'}}>
-                    <Text style={customerHeaderStyles.title}>{title}</Text>
-                    <Text style={styles.subheader}>{titleSubheader}</Text>
-                </View> 
+                    <View style={{alignItems: titleAlignment, justifyContent: 'center', paddingBottom: 20}}>
+                        <Text style={[customerHeaderStyles.title, {backgroundColor: 'green'}]}>{title}</Text>
+                        <Text style={styles.subheader}>{titleSubheader}</Text>
+                    </View> 
+                </View>
 
                 <Divider />
 
@@ -58,16 +58,13 @@ const customerHeaderStyles = StyleSheet.create({
     /* Styling for Title Header */
     header: {
         marginTop: 50,
-        gap: 20,
-        flex: 0,
-        paddingBottom: 20
     },
 
     title: {
         color: 'white',
         fontSize: 18,
         fontWeight: 'bold',
-        paddingTop: 10,
+        paddingTop: 5,
     },
 
     /* Styling for Logo Header */
@@ -85,10 +82,11 @@ const customerHeaderStyles = StyleSheet.create({
     },
 
     btnContainer: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        alignItems: 'flex-start'
+        // position: 'absolute',
+        // top: 7.5,
+        // left: 0,
+        // right: 0,
+        // bottom: 0,
     },
 })

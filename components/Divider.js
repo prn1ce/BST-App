@@ -13,6 +13,7 @@ Divider.defaultProps = {
 
 const dividerStyles = StyleSheet.create({
     divider: {
+        // marginBottom: 20,
         height: 0.5,
         backgroundColor: '#272727',
     },

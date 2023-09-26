@@ -31,7 +31,7 @@ export default function MealInformationPage() {
             {/* Body Content */}
             <ScrollView>
 
-                <View style={[styles.bodyContent, {gap: 20}]}>
+                <View style={[styles.bodyContent, {gap: 20, marginVertical: 20, paddingBottom: 50}]}>
 
                     {/* Add the Header */}
                     <View>
@@ -90,17 +90,16 @@ export default function MealInformationPage() {
                         </View>
                     </View>
 
+                    <View>
+                        <DefaultButton
+                            label={'View Recipe'}
+                            onPress={showPopUp} 
+                        />
+                    </View>
+
                 </View>
 
             </ScrollView>
-
-            {/* End Content, Button. */}
-            <View style={styles.endContent}>
-                <DefaultButton
-                    label={'View Recipe'}
-                    onPress={showPopUp} 
-                />
-            </View>
 
             {/* Render the Modal */}
             <PopUp visible={modalVisible} onClose={() => setModalVisible(false)}>

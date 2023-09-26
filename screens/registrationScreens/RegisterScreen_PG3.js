@@ -12,6 +12,13 @@ export default function RegisterScreen_PG3({ navigation }) {
     {/* Define the Gap between Headers and Element  */}
     const gap = 10;
 
+    {/* Create a function to Handle the Navigation between screens. */}
+    const handleLogin = () => {
+        // You can put any login logic here, and navigate afterward if needed.
+        // For this example, we're simply navigating to the "Home" screen.
+        navigation.navigate('Main', { screen: 'Home' });
+      };
+
     {/* Render the Page. */}
     return (
 
@@ -191,9 +198,10 @@ export default function RegisterScreen_PG3({ navigation }) {
                     {/* Area 3: Bottom */}
                     <View style={styles.endContent}>
                         <DefaultButton
-                            onPress={() => navigation.navigate('TrainingDashboard')} 
+                            onPress={handleLogin} 
+                            stackName={'Main'}
                             navigation={navigation} 
-                            navigateTo={'TrainingDashboard'}
+                            navigateTo={'HomeScreen'}
                             label={'Start Training!'} />
                     </View>                     
 

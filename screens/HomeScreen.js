@@ -68,7 +68,7 @@ export default function HomeScreen() {
             </View>
 
             <ScrollView>
-                <View style={[styles.bodyContent, {gap:20}]}>
+                <View style={[styles.bodyContent, {gap: 20, marginTop: 20, paddingBottom: 50}]}>
 
                     {/* Section 1: Chat Area Section. */}
                     <View>     
