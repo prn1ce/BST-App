@@ -35,8 +35,12 @@ export default function CustomHeader({ title, showLogo, showButton, titleAlignme
                     ) : null}
 
                     <View style={{alignItems: titleAlignment, justifyContent: 'center', paddingBottom: 20}}>
-                        <Text style={[customerHeaderStyles.title, {backgroundColor: 'green'}]}>{title}</Text>
-                        <Text style={styles.subheader}>{titleSubheader}</Text>
+                        <Text style={[customerHeaderStyles.title]}>{title}</Text>
+
+                        { titleSubheader ? (
+                            <Text style={styles.subheader}>{titleSubheader}</Text>
+                        ) : ( null )}
+
                     </View> 
                 </View>
 

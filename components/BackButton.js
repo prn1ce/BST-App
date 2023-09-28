@@ -5,7 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 export default function BackButton() {
     
     return (
-        <View style={{backgroundColor: 'red', flex: 0}}>
+        <View>
             <FontAwesome.Button
                 name="chevron-left" 
                 size={13} 
