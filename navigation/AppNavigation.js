@@ -120,24 +120,3 @@ const AppNavigator = () => (
 )
 
 export default AppNavigator;
-
-// export default function AppNavigation() {
-//   return (
-//     <NavigationContainer>
-//         <Stack.Navigator>
-//             <Stack.Screen name="Welcome" options={{headerShown: false}} component={WelcomeScreen} />
-//             <Stack.Screen name="RegisterScreen_PG1" options={{headerShown: false}} component={RegisterScreen_PG1} /> 
-//             <Stack.Screen name="RegisterScreen_PG2" options={{headerShown: false}} component={RegisterScreen_PG2} />  
-//             <Stack.Screen name="RegisterScreen_PG3" options={{headerShown: false}} component={RegisterScreen_PG3} />     
-//             <Stack.Screen name="LoginScreen" options={{headerShown: false}} component={LoginScreen} />
-//             <Stack.Screen name="HomeScreen" options={{headerShown: false}} component={HomeScreen} />
-//             <Stack.Screen name="MealRegistrationPage" options={{headerShown: false}} component={MealRegistrationPage} />
-//             <Stack.Screen name="MealDashboard" options={{headerShown: false}} component={MealDashboard} />
-//             <Stack.Screen name="CurrentMealPlanPage" options={{headerShown: false}} component={CurrentMealPlanPage} />
-//             <Stack.Screen name="MealInformationPage" options={{headerShown: false}} component={MealInformationPage} />
-//             <Stack.Screen name="TrainingDashboard" options={{headerShown: false}} component={TrainingDashboard} />
-//             <Stack.Screen name="TrainingSession" options={{headerShown: false}} component={TrainingSession} />
-//         </Stack.Navigator>
-//     </NavigationContainer>
-//   )
-// } 
