@@ -6,6 +6,7 @@ import CustomHeader from '../../components/CustomHeader';
 import SingleTile from '../../components/SingleTile';
 import Divider from '../../components/Divider';
 
+
 export default function TrainingDashboard({navigation}) {
 
     {/* Set the Default Width of the Application */}

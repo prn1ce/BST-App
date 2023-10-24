@@ -21,6 +21,8 @@ export default function MealInformationPage() {
     const [modalVisible, setModalVisible] = useState(false);
     const showPopUp = () => setModalVisible(true);
 
+    
+
     {/* Render the Page. */}
     return (
         <SafeAreaView style={styles.container}>

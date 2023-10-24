@@ -25,6 +25,11 @@ import MealInformationPage from '../screens/mealScreens/MealInformationPage';
 {/* Import the Training Pages */}
 import TrainingDashboard from '../screens/trainingScreens/TrainingDashboard';
 import TrainingSession from '../screens/trainingScreens/TrainingSession';
+import TrainingCircuit from '../screens/trainingScreens/TrainingCircuit';
+import TrainingProgress from '../screens/trainingScreens/TrainingProgress';
+import TrainingBooking from '../screens/trainingScreens/TrainingBooking';
+import TrainingBooking2 from '../screens/trainingScreens/TrainingBooking2';
+
 
 /* Create the Navigator */
 const Stack = createNativeStackNavigator(); 
@@ -46,6 +51,11 @@ const TrainingStack = () => (
   <Stack.Navigator initialRouteName='TrainingDashboard'>
     <Stack.Screen name="TrainingDashboard" options={{headerShown: false}} component={TrainingDashboard} />
     <Stack.Screen name="TrainingSession" options={{headerShown: false}} component={TrainingSession} />
+    <Stack.Screen name="TrainingCircuit" options={{headerShown: false}} component={TrainingCircuit} />
+    <Stack.Screen name="TrainingProgress" options={{headerShown: false}} component={TrainingProgress} />
+    <Stack.Screen name="TrainingBooking" options={{headerShown: false}} component={TrainingBooking} />
+    <Stack.Screen name="TrainingBooking2" options={{headerShown: false}} component={TrainingBooking2} />
+    
   </Stack.Navigator>
 )
 

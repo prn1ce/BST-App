@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 
-export default function Divider({ height, color }) {
+export default function InputDivider({ height, color }) {
 
     return  (
         <View style={[dividerStyles.container, {height: height}]}>
@@ -14,22 +14,19 @@ export default function Divider({ height, color }) {
     )
 }
 
-Divider.defaultProps = {
+InputDivider.defaultProps = {
     height: Dimensions.get('window').height / 20,
-    color: 'white'
+    color: 'black' 
 };
 
 const dividerStyles = StyleSheet.create({
-
     container: {
         flexDirection: 'column',
-        justifyContent: 'center', 
-        alignItems: 'center'
     },
     
     divider: {
         flex: 1,
-        width: 2,
+        width: 5,
         marginVertical: 2,
     },
 })

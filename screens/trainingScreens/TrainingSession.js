@@ -21,6 +21,11 @@ export default function TrainingSession({navigation}) {
         'x10 Push Ups',
     ]
 
+    /* Set the Navigation Screens to Navigate to. */
+    const tileNavigators = [
+        'TrainingCircuit'
+    ]
+
     {/* Set the Tile Images to display in the Content Area. */}
     const tileImages = [
         require('../../assets/trainingScreensImages/trainingSessionSection/squat.jpg'),
@@ -58,6 +63,8 @@ export default function TrainingSession({navigation}) {
                                 textSize={18}
                                 buttonVisible={true}  
                                 buttonLabel={'>'}
+                                navigation={navigation}
+                                navigateTo={tileNavigators[0]}
                             />
 
                             {/* Render a Vertical Divider */}
