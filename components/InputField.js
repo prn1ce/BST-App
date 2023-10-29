@@ -29,7 +29,7 @@ export default function InputField({
             <View style={inputFieldStyles.container}>
                 <Text style={[inputFieldStyles.textStyle, {fontSize: fontSize}]}>{label}</Text>
                 <TextInput 
-                    style={[inputFieldStyles.inputStyle, {backgroundColor: bgColour}]}
+                    style={[inputFieldStyles.inputStyle, {backgroundColor: bgColour, color: 'white'}]}
                     placeholder={placeholder}
                     placeholderTextColor={placeholderColour}
                     />

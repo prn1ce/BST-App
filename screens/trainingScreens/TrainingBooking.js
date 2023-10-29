@@ -35,10 +35,10 @@ export default function TrainingBooking({ navigation }) {
 
     {/* The titles of the Trainers  */}
     const arrayTitles = [
-        '(Name)',
-        '(Name)',
-        '(Name)',
-        '(Name)'
+        'John',
+        'Kate',
+        'Anton',
+        'Bella'
     ];
       {/* The image paths of the Recommended Meal Section  */}
       const arrayImages = [

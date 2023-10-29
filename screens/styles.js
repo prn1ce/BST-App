@@ -93,4 +93,16 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     textDecorationLine: 'underline',
   },
+
+textStyle: {
+    fontWeight: 'bold',
+    color: 'white',
+},
+inputStyle: {
+    padding: 10,
+    borderColor: 'white',
+    borderRadius: 5, 
+    borderWidth: 1,
+    color: 'white', // Add color property for text color
+},
 });
